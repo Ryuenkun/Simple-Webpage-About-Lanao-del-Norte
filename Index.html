@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Alert Bar -->
+    <div class="alert-bar">
+        www.lanao del norte.com
+        <span class="close-btn"></span>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="Lanao Del Norte Logo.png" alt="Lanao Del Norte Logo">
+            LANAO DEL NORTE
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#picture">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#spots">Top Spots</a></li>
+            </ul>
+        </nav>
+        <div class="menu-icon">☰</div>
+    </header>
+
+    <!-- Main Section: Picture of the Place -->
+    <section id="picture">
+        <div class="overlay">
+            <h1>Mission</h1>
+            <p>To foster sustainable development through inclusive growth, education, and effective governance.</p><br>
+            <h1>Vision</h1>
+            <p>To be a progressive province that ensures a high quality of life for all residents through socio-economic development and environmental sustainability.</p><br>
+            <h1>Core Values/Mantra</h1>
+            <p>Integrity, Transparency, Inclusiveness, and Unity are the guiding principles in all our endeavors to create a harmonious and thriving community.</p>
+        </div>
+    </section>
+    
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Lanao Del Norte</h2>
+        <p>Welcome to the Lanao del Norte page. Here, you can learn more about the province, its history, culture, and the vibrant community that thrives within its borders. Lanao del Norte, located in the heart of Mindanao, Philippines, is a place rich in traditions, natural beauty, and warm hospitality.</p>
+    </section>
+
+    <!-- Famous Tourist Spots -->
+    <section id="spots">
+        <h1>Lanao del Norte's 3 Famous Tourist Spots</h1>
+        <div class="spots-container">
+            <div class="spot" onclick="openModal('Lake Lanao', 'A large lake in Mindanao, Philippines, known for its scenic beauty and being one of the largest lakes in the country. It is located in Lanao del Sur and is an important cultural and ecological hub, home to various indigenous Maranao communities and diverse wildlife.')">
+                <img src="Lake Lanao.png" alt="Lake Lanao">
+                <h3>Lake Lanao </h3>
+                <p>Click picture to view description</p>
+            </div>
+            <div class="spot" onclick="openModal('Maria Cristina Falls', 'A famous waterfall located in Iligan City, Lanao del Norte, Philippines. It is known for its stunning beauty and as a significant hydropower source for the region. The falls cascade from a height of 98 meters, creating a powerful and picturesque sight.')">
+                <img src="Maria Cristina Falls.png" alt="Maria Cristina Falls">
+                <h3>Maria Cristina Falls</h3>
+                <p>Click picture to view description</p>
+            </div>
+            <div class="spot" onclick="openModal('Cathedral Falls', 'A beautiful waterfall located in Iligan City, Lanao del Norte, Philippines. Known for its twin cascades that resemble a cathedral\'s spires, it is a popular destination for nature lovers and tourists seeking tranquility and natural beauty.')">
+                <img src="Cathedral Falls.png" alt="Cathedral Falls">
+                <h3>Cathedral Falls</h3>
+                <p>Click picture to view description</p>
+            </div>
+        </div>
+    
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <script>
+        function openModal(title, description) {
+            document.getElementById('modal').style.display = 'block';
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-description').innerText = description;
+            document.body.style.overflow = 'hidden'; // Disable page scroll
+        }
+    
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+            document.body.style.overflow = ''; // Re-enable page scroll
+        }
+    </script>
+    
+    
+    
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>Thank you for visiting on our website, Click Continue to see more details about lanao del norte.</p>
+        <a href="https://en.wikipedia.org/wiki/Lanao_del_Norte" class="btn">Continue</a>        
+    </footer>
+</body>
+</html>
